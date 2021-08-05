@@ -10,7 +10,7 @@ The HMS Unity plugin helps you integrate all the power of Huawei Mobile Services
 ![image](https://user-images.githubusercontent.com/8115505/128319758-87f44784-fb3e-44fa-afb1-c911506f5275.png)
 
 
-TwinBalls project is a basic hypercasual game for Unity mobile platform with Huawei Mobile Services Plugin Push Service integration.
+This project is a basic hypercasual game for Unity mobile platform with Huawei Mobile Services Plugin Push Service integration.
 
 Purpose: Try to not touch obstacle
 
@@ -138,7 +138,7 @@ Now you need your game to call the Push Manager from your game. See below for fu
 
 please set your API level as implied in the **Requirements** section
 
-![image](https://user-images.githubusercontent.com/67346749/125591510-fc1bbd04-b344-4924-83e9-52342a39325e.PNG)
+![image](https://user-images.githubusercontent.com/8115505/128321008-a8fb7d82-dce8-4b1d-bce2-05dcc690e249.png)
 
 
  
