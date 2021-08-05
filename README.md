@@ -1,10 +1,25 @@
-# run-mori-run-hms-push
+#  Unity Mobile Reference Game with Push Service
  ![image](https://developer.huawei.com/Enexport/sites/default/images/new-content/HMS-Core/Push-Kit/pushBannerMpEN.jpg_1456436140.jpg)
 
 The HMS Unity plugin helps you integrate all the power of Huawei Mobile Services in your Unity game:
  
 * Push notifications
+
+# Game
  
+![image](https://user-images.githubusercontent.com/8115505/128319758-87f44784-fb3e-44fa-afb1-c911506f5275.png)
+
+
+TwinBalls project is a basic hypercasual game for Unity mobile platform with Huawei Mobile Services Plugin Push Service integration.
+
+Purpose: Try to not touch obstacle
+
+**Push Service Features:**
+
+You can send a notification message is directly sent by Push Kit and displayed in the notification panel on the user device, not requiring your app to be running in the background 
+
+You can send data messages are processed by your app on user devices.
+
 
 
 ## Requirements
@@ -13,13 +28,16 @@ Net 4.x
 
 ## Important
 This plugin supports:
-* Unity version 2019, 2020 - Developed in 2.0 Branch
- 
+* Unity version 2019, 2020 - Developed in master Branch
+* Unity version 2018 - Developed in 2.0-2018 Branch
 
 **Make sure to download the corresponding unity package for the Unity version you are using from the release section**
 
- .
- 
+## Troubleshooting 1
+Please check our [wiki page](https://github.com/EvilMindDevs/hms-unity-plugin/wiki/Troubleshooting)
+
+## Status
+This is an ongoing project, currently WIP. Feel free to contact us if you'd like to collaborate and use Github issues for any problems you might encounter. We'd try to answer in no more than a working day.
 
 ## Connect your game Huawei Mobile Services in 5 easy steps
 
@@ -97,11 +115,30 @@ ____
 ### 4 - Connect your game with any HMS Kit
 
 In order for the plugin to work, you need to select the needed kits Huawei > Kit Settings.
-![image](https://user-images.githubusercontent.com/6827857/113670088-57259c00-96bd-11eb-86d2-d53e4567fba1.png)
 
-It will automaticly create the GameObject for you and it has DontDestroyOnLoad implemented so you don't need to worry about reference being lost.
+In this Push Service reference game , I selected the Push Kit.
 
-Now you need your game to call the Kit Managers from your game. See below for further instructions.
+![2](https://user-images.githubusercontent.com/8115505/128320611-4a372499-eca1-4996-95ce-dbb021d0056d.png)
+
+Push Service is not dependent any other sevices.  
+It will automaticaly create the GameObject for you and it has DontDestroyOnLoad implemented so you don't need to worry about reference being lost.
+
+Now you need your game to call the Push Manager from your game. See below for further instructions.
+    
+
+
+## Troubleshooting 2
+1.If you received package name error , please check your package name on File->Build Settings -> Player Settings -> Other Settings -> Identification
+
+![image](https://user-images.githubusercontent.com/8115505/128307687-6629559d-d873-4e6f-9b2f-54545360e0c0.png)
+
+2.If you received min sdk error , 
+
+![image](https://user-images.githubusercontent.com/67346749/125592730-940912c8-f9b4-4f8b-8fe4-b13532342613.PNG)
+
+please set your API level as implied in the **Requirements** section
+
+![image](https://user-images.githubusercontent.com/67346749/125591510-fc1bbd04-b344-4924-83e9-52342a39325e.PNG)
 
 
  
