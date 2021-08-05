@@ -127,33 +127,33 @@ Now you need your game to call the Push Manager from your game. See below for fu
     
 Then you can call certain functions such as
 ```csharp
-        HMSPushKitManager.Instance.OnTokenSuccess = OnNewToken;
-        HMSPushKitManager.Instance.OnTokenFailure = OnTokenError;
-        HMSPushKitManager.Instance.OnTokenBundleSuccess = OnNewToken;
-        HMSPushKitManager.Instance.OnTokenBundleFailure = OnTokenError;
-        HMSPushKitManager.Instance.OnMessageSentSuccess = OnMessageSent;
-        HMSPushKitManager.Instance.OnSendFailure = OnSendError;
-        HMSPushKitManager.Instance.OnMessageDeliveredSuccess = OnMessageDelivered;
-        HMSPushKitManager.Instance.OnMessageReceivedSuccess = OnMessageReceived;
-        HMSPushKitManager.Instance.OnNotificationMessage = OnNotificationMessage;
-        HMSPushKitManager.Instance.NotificationMessageOnStart = NotificationMessageOnStart;
-    
-      public void OnMessageReceived(RemoteMessage remoteMessage)
-      {
-          var id = remoteMessage.MessageId;
-          var from = remoteMessage.From;
-          var to = remoteMessage.To;
-          var data = remoteMessage.Data;
-          remoteMessageText.text = $"ID: {id}\nFrom: {from}\nTo: {to}\nData: {data}";
-      }
-      public void OnNewToken(string token, Bundle bundle)
-      {
-          Debug.Log($"[HMS] Push token from OnNewToken is {pushToken}");
-          if (pushToken == null)
-          {
-              pushToken = token;
-          }
-      }
+  HMSPushKitManager.Instance.OnTokenSuccess = OnNewToken;
+  HMSPushKitManager.Instance.OnTokenFailure = OnTokenError;
+  HMSPushKitManager.Instance.OnTokenBundleSuccess = OnNewToken;
+  HMSPushKitManager.Instance.OnTokenBundleFailure = OnTokenError;
+  HMSPushKitManager.Instance.OnMessageSentSuccess = OnMessageSent;
+  HMSPushKitManager.Instance.OnSendFailure = OnSendError;
+  HMSPushKitManager.Instance.OnMessageDeliveredSuccess = OnMessageDelivered;
+  HMSPushKitManager.Instance.OnMessageReceivedSuccess = OnMessageReceived;
+  HMSPushKitManager.Instance.OnNotificationMessage = OnNotificationMessage;
+  HMSPushKitManager.Instance.NotificationMessageOnStart = NotificationMessageOnStart;
+
+public void OnMessageReceived(RemoteMessage remoteMessage)
+{
+    var id = remoteMessage.MessageId;
+    var from = remoteMessage.From;
+    var to = remoteMessage.To;
+    var data = remoteMessage.Data;
+    remoteMessageText.text = $"ID: {id}\nFrom: {from}\nTo: {to}\nData: {data}";
+}
+public void OnNewToken(string token, Bundle bundle)
+{
+    Debug.Log($"[HMS] Push token from OnNewToken is {pushToken}");
+    if (pushToken == null)
+    {
+        pushToken = token;
+    }
+}
  
 ```
 
